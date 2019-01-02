@@ -30,7 +30,7 @@ pipeline {
     //Archives the built apk in Jenkins so it can be downloaded
     stage('Archive artifacts'){
       steps{
-        archiveArtifacts artifacts: '**//*apk/app-debug.apk', onlyIfSuccessful: true
+        archiveArtifacts artifacts: '**/apk/app-debug.apk', onlyIfSuccessful: true
       }
     }
   }//end stages
