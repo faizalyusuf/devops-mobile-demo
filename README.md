@@ -20,11 +20,4 @@ Requirements
     - Android Support libraries
  * [Appium](http://appium.io/)
  
- 3. Android mobile test device running Android >5.0
-
-Building
---------
-
-To build, install and run a debug version, run this from the root of the project:
-
-    ./gradlew assembleDebug
+ 3. Android mobile test device running Android >=5.0
