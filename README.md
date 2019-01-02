@@ -8,16 +8,17 @@ This demonstration will showcase the principles of continuous integration, conti
 
 Requirements
 ------------
- * A Jenkins master server up and running. See [here](https://github.com/viseo-asia/docker-enterprise-edition-2.0-demo/blob/master/install_continuous_integration_server.md) for set-up instructions.
- * A Jenkins agent(preferably running on MacOSX) with the following installed:
- 1. Java
- 2. [Android SDK](http://developer.android.com/sdk/index.html) with:
-    Android [5.1 (API 22) ](http://developer.android.com/tools/revisions/platforms.html#5.1).
-    Android SDK Tools
-    Android SDK Build tools 23.0.0.0 rc3
-    Android Support Repository
-    Android Support libraries
- 3. [Appium](http://appium.io/)
+ 1. A Jenkins master server up and running. See [here](https://github.com/viseo-asia/docker-enterprise-edition-2.0-demo/blob/master/install_continuous_integration_server.md) for set-up instructions.
+ 
+ 2. A Jenkins agent(preferably running on MacOSX) with the following installed:
+ * Java
+ * [Android SDK](http://developer.android.com/sdk/index.html) with:
+    - Android [5.1 (API 22) ](http://developer.android.com/tools/revisions/platforms.html#5.1).
+    - Android SDK Tools
+    - Android SDK Build tools 23.0.0.0 rc3
+    - Android Support Repository
+    - Android Support libraries
+ * [Appium](http://appium.io/)
 
 Building
 --------
