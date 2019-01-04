@@ -5,7 +5,7 @@ This demonstration will showcase the principles of continuous integration, conti
 
 Requirements
 ------------
- 1. A Jenkins master server up and running. See [here](https://github.com/viseo-asia/docker-enterprise-edition-2.0-demo/blob/master/install_continuous_integration_server.md) for set-up instructions.
+ 1. A Jenkins master server.
  
  2. A Jenkins agent(preferably running on MacOSX) with the following installed:
  * Java
