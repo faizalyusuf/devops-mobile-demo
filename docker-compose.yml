@@ -6,5 +6,12 @@ services:
       - "8080:8080"
     volumes:
       - jenkins-vol:/var/jenkins_home
+#    sonarqube:
+#      image: sonarqube:lts-alpine
+#      ports:
+#        - "9000:9000"
+#      volumes:
+#        - sonarqube:/opt/sonarqube
 volumes:
   jenkins-vol:
+#   sonarqube:
