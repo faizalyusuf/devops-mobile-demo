@@ -1,6 +1,3 @@
-Animate Android App
-===================
-
 Introduction
 ------------
 
