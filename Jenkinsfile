@@ -34,11 +34,11 @@ pipeline {
       }
     } 
   }//end stages
-   post {
+  /* post {
     always {
       cleanWs()
     }
-  }
+  }*/
 }//end pipeline
 
 
