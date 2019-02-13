@@ -32,12 +32,14 @@ pipeline {
       steps{
         archiveArtifacts artifacts: '**/apk/app-debug.apk', onlyIfSuccessful: false
       }
-    }
+    } 
   }//end stages
-  post {
+   /*post {
     always {
       cleanWs()
     }
-  }
+  }*/
 }//end pipeline
+
+
 
