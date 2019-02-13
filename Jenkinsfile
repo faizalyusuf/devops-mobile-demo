@@ -26,7 +26,7 @@ pipeline {
             sh './gradlew clean && ./gradlew test'
           }
       }
-    */}
+    }*/
     //Archives the built apk in Jenkins so it can be downloaded
     stage('Archive artifacts'){
       steps{
