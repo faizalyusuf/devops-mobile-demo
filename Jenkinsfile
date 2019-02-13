@@ -1,8 +1,8 @@
 pipeline {
-  
+
   agent {label 'macagent'}
   
-  stages {    
+  stages {
     stage('Build') {
       steps {
         sh 'chmod +x gradlew && ./gradlew clean && ./gradlew assembleDebug'
@@ -14,23 +14,23 @@ pipeline {
               def scannerHome = tool 'sonar-scanner';
                 withSonarQubeEnv('sonarqube') {
                   sh "${scannerHome}/bin/sonar-scanner"
-                }   
+                }
         }
       }
     }*/
     //Installs the apk to the test device and runs the appium tests
-    stage('Install & Test'){
+   /* stage('Install & Test'){
       steps{
           dir('appium-test'){
             sh 'sh test.sh'
             sh './gradlew clean && ./gradlew test'
           }
       }
-    }
+    */}
     //Archives the built apk in Jenkins so it can be downloaded
     stage('Archive artifacts'){
       steps{
-        archiveArtifacts artifacts: '**/apk/app-debug.apk', onlyIfSuccessful: true
+        archiveArtifacts artifacts: '**/apk/app-debug.apk', onlyIfSuccessful: false
       }
     }
   }//end stages
@@ -40,3 +40,4 @@ pipeline {
     }
   }
 }//end pipeline
+
