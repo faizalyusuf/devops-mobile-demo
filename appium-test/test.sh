@@ -1,6 +1,6 @@
 #!/bin/bash
 
-adb uninstall com.hitherejoe.animate
+$ANDROID_HOME/platform-tools/adb uninstall com.hitherejoe.animate
 cd ../
-adb install app/build/outputs/apk/app-debug.apk
+$ANDROID_HOME/platform-tools/adb install app/build/outputs/apk/app-debug.apk
 appium &
