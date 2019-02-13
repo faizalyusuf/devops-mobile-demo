@@ -19,14 +19,14 @@ pipeline {
       }
     }*/
     //Installs the apk to the test device and runs the appium tests
-   /* stage('Install & Test'){
+    stage('Install & Test'){
       steps{
           dir('appium-test'){
             sh 'sh test.sh'
             sh './gradlew clean && ./gradlew test'
           }
       }
-    }*/
+    }
     //Archives the built apk in Jenkins so it can be downloaded
     stage('Archive artifacts'){
       steps{
@@ -34,12 +34,11 @@ pipeline {
       }
     } 
   }//end stages
-   /*post {
+   post {
     always {
       cleanWs()
     }
-  }*/
+  }
 }//end pipeline
-
 
 
