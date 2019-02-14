@@ -81,13 +81,16 @@ if you get below output, basically you need to accept the laptop on your mobile 
 
 ## Few more mobile settings as below screenshot
 
-Developer Mode Enabled
+#Developer Mode Enabled
+
 ![](images/mobilesettings.jpg)
 
-Developer Stay Awake Setting
+#Developer Stay Awake Setting
+
 ![](images/developersetting1.jpg)
 
-Developer USB Debugging
+#Developer USB Debugging
+
 ![](images/developersetting2.jpg)
 
 
@@ -106,9 +109,16 @@ sdk.dir=/Users/Admin/Library/Android/sdk
 
 ## Device details on which test has to be performed
 
-appiumtest.java at [this location](https://github.com/viseo-asia/devops-mobile-demo/blob/master/appium-test/src/test/java/org/hello/AppiumTest.java) needs to be updated with device ID found in output of  **$adb devices -l**.  Updated file would look like below.
+[appiumtest.java](https://github.com/viseo-asia/devops-mobile-demo/blob/master/appium-test/src/test/java/org/hello/AppiumTest.java) needs to be updated with device ID found in output **$adb devices -l**.  Updated file would look like below.
 
 ![](images/devicedetails.png)
 
 
+
+
+## Final Result
+
+If build is successful you should be able see these app in your mobile.
+
+<img src="images/finalresult.jpg" width="300">
 
