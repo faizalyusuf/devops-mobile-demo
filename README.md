@@ -57,8 +57,7 @@ output show look like below, please pay attention to
  * **android exists**
  * **emulator exists**
    
-   ![](images/appiumdoctor.png)
-
+<img src="images/appiumdoctor.png" width="400">
 
 ## List connected device
 
@@ -71,28 +70,25 @@ $adb devices -l
 
 expected output
 
-![](images/devicelist.png)
-
+<img src="images/devicelist.png" width="400">
 
 if you get below output, basically you need to accept the laptop on your mobile screen.
-![](images/deviceunauth.png)
-
+<img src="images/deviceunauth.png" width="400">
    
 
 ## Few more mobile settings as below screenshot
 
 #Developer Mode Enabled
 
-![](images/mobilesettings.jpg)
+<img src="images/mobilesettings.jpg" width="300">
 
 #Developer Stay Awake Setting
 
-![](images/developersetting1.jpg)
+<img src="images/developersetting1.jpg" width="300">
 
 #Developer USB Debugging
 
-![](images/developersetting2.jpg)
-
+<img src="images/developersetting2.jpg" width="300">
 
 Update Code Before Test
 -----------------------
@@ -111,7 +107,7 @@ sdk.dir=/Users/Admin/Library/Android/sdk
 
 [appiumtest.java](https://github.com/viseo-asia/devops-mobile-demo/blob/master/appium-test/src/test/java/org/hello/AppiumTest.java) needs to be updated with device ID found in output **$adb devices -l**.  Updated file would look like below.
 
-![](images/devicedetails.png)
+<img src="images/devicedetails.png" width="400">
 
 
 
