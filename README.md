@@ -20,7 +20,8 @@ Requirements
  * [Appium](http://appium.io/)
     - Follow this [link ](http://appium.io/docs/en/about-appium/getting-started/) to make sure appium is installed.
 
- 3. Environment Variable
+## Environment Variable
+
     It's very important to  set environment variable for this code to work. Login to your laptop terminal and create fil /home/<user>/.bash_profile
     and add below content. If location is different update accordingly. 
 
@@ -39,22 +40,26 @@ Requirements
     ```
    
      
- 4 appium-doctor check
-    - appium-doctor check is very import to make sure testing environment is ready.  After installing appium as per below link you need to run 
+##appium-doctor check
+  
+  appium-doctor check is very import to make sure testing environment is ready.  After installing appium as per below link you need to run.
+
+
       ```
       appium-doctor
       ```  
       output show look like below, please pay attention to 
+
  * **ANDROID_HOME**
  * **JAVA_HOME**
  * **adb**
  * **android exists**
  * **emulator exists**
    
-    [](images/appiumdoctor.png)
+   ![](images/appiumdoctor.png)
 
 
- 5  List connected device
+## List connected device
     Enable developer mode on your mobile this [link](https://www.digitaltrends.com/mobile/how-to-get-developer-options-on-android/) should help.
     connect the mobile to laptop and execute below command. 
 
@@ -62,13 +67,13 @@ Requirements
 $adb devices -l
 ```
 
-* expected output
+ expected output
 
-[](images/devicelist.png)
+![](images/devicelist.png)
 
 
-* if you get below output, basically you need to accept the laptop on your mobile screen.
-[](images/deviceunauth.png)
+ if you get below output, basically you need to accept the laptop on your mobile screen.
+![](images/deviceunauth.png)
 
    
 
