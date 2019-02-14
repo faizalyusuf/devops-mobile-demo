@@ -79,7 +79,7 @@ if you get below output, basically you need to accept the laptop on your mobile 
 
    
 
-##Few more mobile settings as below screenshot
+## Few more mobile settings as below screenshot
 
 
 
@@ -87,26 +87,19 @@ if you get below output, basically you need to accept the laptop on your mobile 
 Update Code Before Test
 -----------------------
 
-##Android SDK location
+## Android SDK location
 
-You need to update android sdk location in [this](https://github.com/viseo-asia/devops-mobile-demo/blob/master/local.properties) local.properties.
+You need to update android sdk location in [gradle.properties](https://github.com/viseo-asia/devops-mobile-demo/blob/master/gradle.properties).
 
 ```
-## This file must *NOT* be checked into Version Control Systems,
-# as it contains information specific to your local configuration.
-#
-# Location of the SDK. This is only used by Gradle.
-# For customization when using a Version Control System, please read the
-# header note.
-#Mon Feb 11 21:42:52 SGT 2019
 sdk.dir=/Users/Admin/Library/Android/sdk
 ```
 
 
 
-##Device details on which test has to be performed
+## Device details on which test has to be performed
 
-appiumtest.java at [this location](https://github.com/viseo-asia/devops-mobile-demo/blob/master/appium-test/src/test/java/org/hello/AppiumTest.java) needs to be updated with device ID found in output of  **$adb devices -l**.  Update file would look like below.
+appiumtest.java at [this location](https://github.com/viseo-asia/devops-mobile-demo/blob/master/appium-test/src/test/java/org/hello/AppiumTest.java) needs to be updated with device ID found in output of  **$adb devices -l**.  Updated filewould look like below.
 
 ![](images/devicedetails.png)
 
