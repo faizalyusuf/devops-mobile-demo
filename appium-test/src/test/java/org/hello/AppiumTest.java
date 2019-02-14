@@ -46,12 +46,12 @@ public class AppiumTest {
     final DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("device", "Android");
     capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-    capabilities.setCapability(CapabilityType.VERSION, "7.0.0");
+    capabilities.setCapability(CapabilityType.VERSION, "9.0.0");
     capabilities.setCapability(CapabilityType.PLATFORM, "OS X 10.9");
     capabilities.setCapability("platformName", "Android");
     capabilities.setCapability("appPackage","com.hitherejoe.animate");
-    capabilities.setCapability("deviceName", "device");
-    capabilities.setCapability("udid","709153000652");
+    capabilities.setCapability("deviceName", "OnePlus5T");
+    capabilities.setCapability("udid","b40fba0f");
     capabilities.setCapability("appActivity", "com.hitherejoe.animate.ui.activity.MainActivity");
     driver = new SwipeableWebDriver(new URL("http://localhost:4723/wd/hub"),
         capabilities);
