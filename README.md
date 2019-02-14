@@ -81,7 +81,14 @@ if you get below output, basically you need to accept the laptop on your mobile 
 
 ## Few more mobile settings as below screenshot
 
+Developer Mode Enabled
+![](images/mobilesettings.jpg)
 
+Developer Stay Awake Setting
+![](images/developersetting1.jpg)
+
+Developer USB Debugging
+![](images/developersetting2.jpg)
 
 
 Update Code Before Test
@@ -99,7 +106,7 @@ sdk.dir=/Users/Admin/Library/Android/sdk
 
 ## Device details on which test has to be performed
 
-appiumtest.java at [this location](https://github.com/viseo-asia/devops-mobile-demo/blob/master/appium-test/src/test/java/org/hello/AppiumTest.java) needs to be updated with device ID found in output of  **$adb devices -l**.  Updated filewould look like below.
+appiumtest.java at [this location](https://github.com/viseo-asia/devops-mobile-demo/blob/master/appium-test/src/test/java/org/hello/AppiumTest.java) needs to be updated with device ID found in output of  **$adb devices -l**.  Updated file would look like below.
 
 ![](images/devicedetails.png)
 
