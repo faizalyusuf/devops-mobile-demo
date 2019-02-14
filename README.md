@@ -61,8 +61,9 @@ output show look like below, please pay attention to
 
 
 ## List connected device
-    Enable developer mode on your mobile this [link](https://www.digitaltrends.com/mobile/how-to-get-developer-options-on-android/) should help.
-    connect the mobile to laptop and execute below command. 
+
+Enable developer mode on your mobile this [link](https://www.digitaltrends.com/mobile/how-to-get-developer-options-on-android/) should help.
+connect the mobile to laptop and execute below command. 
 
 ```
 $adb devices -l
@@ -73,8 +74,41 @@ expected output
 ![](images/devicelist.png)
 
 
- if you get below output, basically you need to accept the laptop on your mobile screen.
+if you get below output, basically you need to accept the laptop on your mobile screen.
 ![](images/deviceunauth.png)
 
    
+
+##Few more mobile settings as below screenshot
+
+
+
+
+Update Code Before Test
+-----------------------
+
+##Android SDK location
+
+You need to update android sdk location in [this](https://github.com/viseo-asia/devops-mobile-demo/blob/master/local.properties) local.properties.
+
+```
+## This file must *NOT* be checked into Version Control Systems,
+# as it contains information specific to your local configuration.
+#
+# Location of the SDK. This is only used by Gradle.
+# For customization when using a Version Control System, please read the
+# header note.
+#Mon Feb 11 21:42:52 SGT 2019
+sdk.dir=/Users/Admin/Library/Android/sdk
+```
+
+
+
+##Device details on which test has to be performed
+
+appiumtest.java at [this location](https://github.com/viseo-asia/devops-mobile-demo/blob/master/appium-test/src/test/java/org/hello/AppiumTest.java) needs to be updated with device ID found in output of  **$adb devices -l**.  Update file would look like below.
+
+![](images/devicedetails.png)
+
+
 
