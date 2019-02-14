@@ -22,33 +22,34 @@ Requirements
 
 ## Environment Variable
 
-    It's very important to  set environment variable for this code to work. Login to your laptop terminal and create fil /home/<user>/.bash_profile
-    and add below content. If location is different update accordingly. 
+It's very important to  set environment variable for this code to work. Login to your laptop terminal and create fil /home/<user>/.bash_profile
+and add below content. If location is different update accordingly. 
 
-    ```
-    export JAVA_HOME=/Library/Java/Home
-    export ANDROID_HOME=/Users/Admin/Library/Android/sdk
-    export adb=$ANDROID_HOME/platform-tools/adb
-    ```
+```
+export JAVA_HOME=/Library/Java/Home
+export ANDROID_HOME=/Users/Admin/Library/Android/sdk
+export adb=$ANDROID_HOME/platform-tools/adb
+```
     
-    After you have set the bash_profile, close the terminal and reopen. Test as below and make sure java and android home has some content, else something is     wrong, fix it to proceed.
+After you have set the bash_profile, close the terminal and reopen. Test as below and make sure java and android home has some content, else something is     wrong, fix it to proceed.
 
-    ```
-    echo $JAVA_HOME
-    echo $ANDROID_HOME
-    $adb
-    ```
+```
+echo $JAVA_HOME
+echo $ANDROID_HOME
+$adb
+```
    
      
-##appium-doctor check
+## appium-doctor check
   
-  appium-doctor check is very import to make sure testing environment is ready.  After installing appium as per below link you need to run.
+appium-doctor check is very import to make sure testing environment is ready.  After installing appium as per below link you need to run.
 
 
-      ```
-      appium-doctor
-      ```  
-      output show look like below, please pay attention to 
+```
+appium-doctor
+```  
+
+output show look like below, please pay attention to 
 
  * **ANDROID_HOME**
  * **JAVA_HOME**
@@ -67,7 +68,7 @@ Requirements
 $adb devices -l
 ```
 
- expected output
+expected output
 
 ![](images/devicelist.png)
 
