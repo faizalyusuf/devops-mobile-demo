@@ -44,7 +44,12 @@ pipeline {
     stage('Uploading APK'){
 
       steps{
-        sh 'sleep 600'
+        get_project_arn{
+          sh 'arn=aws devicefarm list-projects | jq '.projects[0].arn''
+          sh 'echo $arn'
+        }  
+
+        
       }
     }
 
