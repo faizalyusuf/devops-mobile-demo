@@ -13,18 +13,18 @@ pipeline {
 
     stage('Uploading APK'){
       steps{
-          sh "arn=aws devicefarm list-projects | jq '.projects[0].arn'"
+          sh 'arn=`aws devicefarm list-projects | jq '.projects[0].arn'`'
           sh 'echo $arn'
         
       }
     }
 
   }//end stages
-  /* post {
+   post {
     always {
       cleanWs()
     }
-  }*/
+  }
 }//end pipeline
 
 
