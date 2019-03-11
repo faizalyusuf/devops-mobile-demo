@@ -45,11 +45,11 @@ pipeline {
 
       steps{
         get_project_arn{
-          sh 'arn=aws devicefarm list-projects | jq '.projects[0].arn''
+          sh "arn=aws devicefarm list-projects | jq '.projects[0].arn'"
           sh 'echo $arn'
         }  
 
-        
+
       }
     }
 
