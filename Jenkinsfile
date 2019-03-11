@@ -32,6 +32,13 @@ pipeline {
       steps{
         archiveArtifacts artifacts: '**/apk/app-debug.apk', onlyIfSuccessful: false
       }
+    }
+    //Push APK to cloud for testing on multiple devices
+
+    stage('Proceed to Cloud Testing'){
+        steps{
+          input 'Promote to Cloud For Testing'
+        }
     } 
   }//end stages
   /* post {
