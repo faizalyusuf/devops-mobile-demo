@@ -13,8 +13,7 @@ pipeline {
 
     stage('Uploading APK'){
       steps{
-          sh 'aws devicefarm list-projects'
-          
+          sh ' aws devicefarm list-projects | jq '.projects[0].arn' '
         
       }
     }
