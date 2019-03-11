@@ -40,6 +40,14 @@ pipeline {
           input 'Promote to Cloud For Testing'
         }
     } 
+
+    stage('Uploading APK'){
+
+      steps{
+        sh 'sleep 600'
+      }
+    }
+
   }//end stages
   /* post {
     always {
