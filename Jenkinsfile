@@ -13,7 +13,7 @@ pipeline {
 
     stage('Uploading APK'){
       steps{
-          sh 'aws devicefarm create-upload --project-arn arn:aws:devicefarm:us-west-2:705582597265:project:2c21a412-bb7b-4657-a28c-d7d78b3888f7 --name app-debug-unaligned.apk  --type ANDROID_APP  && sleep 600'
+          sh 'aws devicefarm create-upload --project-arn arn:aws:devicefarm:us-west-2:340227591783:project:504e5963-4069-4ad1-98cc-2067cf0185f0 --name app-debug-unaligned.apk  --type ANDROID_APP  && sleep 600'
         
       }
     }
