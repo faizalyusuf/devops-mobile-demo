@@ -1,7 +1,7 @@
 pipeline {
 
   agent {label 'macagent'}
-  
+  stages {
     
     //Push APK to cloud for testing on multiple devices
 
