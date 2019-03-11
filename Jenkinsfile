@@ -2,12 +2,6 @@ pipeline {
 
   agent {label 'macagent'}
   
-  stages {
-    stage('Build') {
-      steps {
-        sh 'chmod +x gradlew && ./gradlew clean && ./gradlew assembleDebug'
-      }
-    }
     
     //Push APK to cloud for testing on multiple devices
 
