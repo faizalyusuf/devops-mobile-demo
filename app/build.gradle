@@ -8,7 +8,7 @@ android {
     defaultConfig {
         applicationId "com.hitherejoe.animate"
         minSdkVersion 21
-        targetSdkVersion 23
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -21,7 +21,7 @@ android {
 }
 
 dependencies {
-    final SUPPORT_LIBRARY_VERSION = '23.1.1'
+    final SUPPORT_LIBRARY_VERSION = '27.0.3'
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
