@@ -1,7 +1,7 @@
 
 pipeline {
 
-  agent {label 'macagent'}
+  agent {label 'appium_slave'}
   stages {
     
     
