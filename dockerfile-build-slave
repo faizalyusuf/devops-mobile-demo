@@ -1,0 +1,8 @@
+FROM dipinthomas2003/android_base:23.0.2
+
+
+# Copy Agent
+COPY agent.jar . 
+
+#make agent
+CMD java -jar agent.jar -jnlpUrl http://139.59.74.73:8080/computer/MacContainer/slave-agent.jnlp -secret 9a8b07d1092f7c01cf0e8fcfa57981116c4480054518c7000f77793325721e94 -workDir "/User/Admin/jenkins-local" 

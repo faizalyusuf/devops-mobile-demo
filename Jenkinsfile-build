@@ -1,0 +1,27 @@
+pipeline {
+
+  agent {label 'macagent'}
+  stages {
+    stage('Build') {
+      steps {
+        sh 'chmod +x gradlew && ./gradlew clean && ./gradlew assembleDebug'
+      }
+    }
+
+    stage('Proceed to Appium Testing'){
+        steps{
+            input 'Procced with testing'
+        }
+    }
+
+    stage('Appium Job'){
+        steps{
+            build job: 'mobile-ci-test'
+        }
+    }
+
+  }//end stages
+   
+}//end pipeline
+
+
