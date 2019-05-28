@@ -7,13 +7,13 @@ services:
   build-slave:
     image: dipinthomas2003/android_build_slave:23.0.2
     volumes:
-      - /root/docker/apk_share:/root/workspace/
+      - /home/docker/apk_share:/root/workspace/
 
   test-slave:
     image: dipinthomas2003/appium_slave:1.10.1
     ports:
      - 4723:4723
     volumes:
-      - /root/docker/apk_share/mobile-ci-build:/root/workspace/mobile-ci-test/
+      - /home/docker/apk_share/mobile-ci-build:/root/workspace/mobile-ci-test/
       - /dev/bus/usb:/dev/bus/usb
     privileged: true
