@@ -2,11 +2,11 @@ pipeline {
 
   agent {label 'macagent'}
   stages {
-   /* stage('Build') {
+   stage('Build') {
       steps {
         sh 'chmod +x gradlew && ./gradlew clean && ./gradlew assembleDebug'
       }
-    }*/
+    }
 
 
    /*stage('Code Scan'){
