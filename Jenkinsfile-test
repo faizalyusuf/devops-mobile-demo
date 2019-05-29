@@ -7,7 +7,7 @@ pipeline {
     
     //Installs the apk to the test device and runs the appium tests
     stage('Install & Test'){
-      steps {
+      steps{
         sh 'chmod +x gradlew && ./gradlew clean && ./gradlew assembleDebug'
       }
 
