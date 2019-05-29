@@ -30,7 +30,7 @@ pipeline {
 
     stage('Uploading APK'){
       steps{
-          sh 'sleep 600'      
+          sh 'uname -a'      
       }
     }
 
