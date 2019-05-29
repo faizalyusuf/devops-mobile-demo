@@ -10,8 +10,9 @@ pipeline {
 
 
       steps{
+          sh 'chmod +x gradlew && ./gradlew clean && ./gradlew assembleDebug'
           dir('appium-test'){
-            sh 'chmod +x gradlew && ./gradlew clean && ./gradlew assembleDebug'
+            
             sh 'sh test.sh'
             sh './gradlew clean && ./gradlew test'
           }
