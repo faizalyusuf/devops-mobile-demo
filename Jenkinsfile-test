@@ -1,0 +1,45 @@
+
+pipeline {
+
+  agent {label 'macagent'}
+  stages {
+    
+    
+    //Installs the apk to the test device and runs the appium tests
+    stage('Install & Test'){
+      steps {
+        sh 'chmod +x gradlew && ./gradlew clean && ./gradlew assembleDebug'
+      }
+
+      steps{
+          dir('appium-test'){
+            sh 'sh test.sh'
+            sh './gradlew clean && ./gradlew test'
+          }
+      }
+    }
+    
+  
+    //Push APK to cloud for testing on multiple devices
+
+    stage('Proceed to Cloud Testing'){
+        steps{
+          input 'Promote to Cloud For Testing'
+        }
+    } 
+
+    stage('Uploading APK'){
+      steps{
+          sh 'aws devicefarm create-upload --project-arn arn:aws:devicefarm:us-west-2:340227591783:project:6d97c28e-0444-4eca-ad1f-79dc5dd9e927 --name app-debug-unaligned.apk  --type ANDROID_APP  && sleep 600'      
+      }
+    }
+
+  }//end stages
+   /*post {
+    always {
+      cleanWs()
+    }
+  }*/
+}//end pipeline
+
+
