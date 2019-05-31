@@ -1,7 +1,7 @@
 
 pipeline {
 
-  agent {label 'macagent'}
+  agent {label 'test_slave'}
   stages {
     
     
@@ -10,7 +10,7 @@ pipeline {
 
 
       steps{
-          sh 'chmod +x gradlew && ./gradlew clean && ./gradlew assembleDebug'
+          
           dir('appium-test'){
             
             sh 'sh test.sh'
