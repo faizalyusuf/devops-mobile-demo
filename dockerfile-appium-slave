@@ -14,4 +14,4 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash && \
 COPY agent.jar . 
 
 #make agent
-CMD java -jar agent.jar -jnlpUrl http://139.59.74.73:8080/computer/Appium-Container/slave-agent.jnlp -secret aed5f582d474e4525893c372859398f2314c0311f08211e482109cb4a993815b -workDir "/User/Admin/jenkins-local"
+CMD adb devices &&  java -jar agent.jar -jnlpUrl http://<REPLACE_ME_CI_SYSTEM>/computer/Appium-Container/slave-agent.jnlp -secret <SECRET_CHANGE_ME> -workDir "<CHANGE_ME_WORKSPACE>"
