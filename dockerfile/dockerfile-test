@@ -1,0 +1,17 @@
+FROM dipinthomas2003/android_base:23.0.2
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+ARG APPIUM_VERSION=1.10.1
+ENV APPIUM_VERSION=$APPIUM_VERSION
+
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash && \
+    apt-get -qqy install nodejs && \
+    npm install -g appium@${APPIUM_VERSION} --unsafe-perm=true --allow-root 
+
+
+# Copy Agent
+COPY agent.jar . 
+
+#make agent
+CMD adb devices &&  java -jar agent.jar -jnlpUrl http://<REPLACE_ME_CI_SYSTEM>/computer/Appium-Container/slave-agent.jnlp -secret <SECRET_CHANGE_ME> -workDir "<CHANGE_ME_WORKSPACE>"

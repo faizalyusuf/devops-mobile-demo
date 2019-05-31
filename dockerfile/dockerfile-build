@@ -1,0 +1,10 @@
+FROM dipinthomas2003/android_base:23.0.2
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+
+# Copy Agent
+COPY agent.jar . 
+
+#make agent
+CMD adb devices &&  java -jar agent.jar -jnlpUrl http://<REPLACE_ME_CI_SYSTEM>/computer/Appium-Container/slave-agent.jnlp -secret <SECRET_CHANGE_ME> -workDir "<CHANGE_ME_WORKSPACE>"
